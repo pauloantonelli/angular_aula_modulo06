@@ -1,11 +1,10 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <nav>
   <div class="nav-wrapper">
-    <a [routerLink]="['']" href="#" class="brand-logo right">Rotas NG2+</a>
-    <ul routerLinkActive="router-link-active"  id="nav-mobile" class="left hide-on-med-and-down">
-      <li><a [routerLink]="['']" routerLinkActive="router-link-active" >Home</a></li>
-      <li><a [routerLink]="['login']">Login</a></li>
-      <li><a [routerLink]="['cursos']">Cursos</a></li>
+    <a routerLinkActive="active" [routerLink]="['']" href="#" class="brand-logo right">Rotas NG2+</a>
+    <ul id="nav-mobile" class="left hide-on-med-and-down">
+      <li routerLinkActive="active"><a [routerLink]="['login']">Login</a></li>
+      <li routerLinkActive="active"><a [routerLink]="['cursos']">Cursos</a></li>
     </ul>
   </div>
 </nav>
