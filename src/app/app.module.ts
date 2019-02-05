@@ -6,10 +6,12 @@ import { AppComponent } from './app.component';
 import { CursosModule } from './cursos/cursos.module';
 import { HomeModule } from './home/home.module';
 import { LoginModule } from './login/login.module';
+import { CursoDetalheComponent } from './curso-detalhe/curso-detalhe.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CursoDetalheComponent
   ],
   imports: [
     BrowserModule,
