@@ -9,6 +9,7 @@ import { ActivatedRoute } from '@angular/router';
 export class CursoDetalheComponent implements OnInit {
   public id: string;
   constructor(private route: ActivatedRoute) {
+    console.log(this.route);
     this.id = this.route.snapshot.params['id'];
   }
 
