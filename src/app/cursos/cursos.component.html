@@ -1,8 +1,9 @@
 <div class="collection">
+  <p>Lista de cursos</p>
   <a
     class="collection-item"
     *ngFor="let curso of cursos"
     [routerLink]="['/curso', curso.id]"
-    >ID do curso: {{ curso.id }} | NOME DO CURSO: {{ curso.nome }}</a
+    >CÓDIGO: {{ curso.id }} | NOME: {{ curso.nome }}</a
   >
 </div>
