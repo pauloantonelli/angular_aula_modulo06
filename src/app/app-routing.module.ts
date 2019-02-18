@@ -4,8 +4,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { CursosComponent } from './cursos/cursos.component';
 import { LoginComponent } from './login/login.component';
-import { CursoDetalheComponent } from './curso-detalhe/curso-detalhe.component';
-import { NaoEncontradoComponent } from './nao-encontrado/nao-encontrado.component';
+import { CursoDetalheComponent } from './cursos/curso-detalhe/curso-detalhe.component';
+import { NaoEncontradoComponent } from './cursos/nao-encontrado/nao-encontrado.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
