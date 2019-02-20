@@ -1,5 +1,25 @@
-<p>
-  alunos works!
-</p>
+<div class="row">
+  <h1 class="col s12" style="text-align: center">
+    Lista de Alunos
+  </h1>
 
-<router-outlet></router-outlet>
+  <div class="col s6">
+    <div class="collection">
+      <a
+        *ngFor="let aluno of alunos"
+        [routerLink]="[aluno.id]"
+        class="collection-item"
+        >{{ aluno.nome }}
+      </a
+      >
+    </div>
+
+    <button [routerLink]="['novo']" class="waves-effect waves-light btn">
+      Novo Aluno
+    </button>
+  </div>
+
+  <div class="col s6">
+    <router-outlet></router-outlet>
+  </div>
+</div>

@@ -1,3 +1,16 @@
 <p>
-  aluno-detalhe works!
+  ID: {{ info.id }}
 </p>
+
+<p>
+  NOME: {{ info.nome }}
+</p>
+<p>
+  EMAIL: {{ info.email }}
+</p>
+<button
+(click)="editarAluno()"
+class="waves-effect waves-light btn"
+>
+editar
+</button>

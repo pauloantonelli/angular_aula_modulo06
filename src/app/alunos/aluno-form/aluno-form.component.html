@@ -1,3 +1,42 @@
-<p>
-  aluno-form works!
-</p>
+<div class="row">
+  <div class="col s12">
+    <div class="row">
+      <div class="input-field col s12">
+        <input
+          [(ngModel)]="info.id"
+          placeholder=""
+          id="first_name"
+          type="text"
+          class="validate"
+        />
+        <label class="active" for="first_name">ID</label>
+      </div>
+      <div class="input-field col s12">
+        <input
+          [(ngModel)]="info.nome"
+          placeholder=""
+          id="first_name"
+          type="text"
+          class="validate"
+        />
+        <label class="active" for="first_name">Nome</label>
+      </div>
+      <div class="input-field col s12">
+        <input
+          [(ngModel)]="info.email"
+          placeholder=""
+          id="first_name"
+          type="text"
+          class="validate"
+        />
+        <label class="active" for="first_name">Email</label>
+      </div>
+      <button
+        (click)="novoAluno()"
+        class="waves-effect waves-light btn"
+      >
+        editar
+      </button>
+    </div>
+  </div>
+</div>
