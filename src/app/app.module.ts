@@ -18,7 +18,7 @@ import { HomeModule } from './home/home.module';
     // CursosModule, removido por causa do lazy loading
     // AlunosModule, removido por causa do lazy loading
     HomeModule,
-    LoginModule
+    LoginModule,
   ],
   bootstrap: [AppComponent]
 })
