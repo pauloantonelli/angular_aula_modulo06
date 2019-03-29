@@ -1,6 +1,10 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { Subscription } from 'rxjs';
 import { ActivatedRoute } from '@angular/router';
+
+import { FormDeactivateInterface } from 'src/app/guards/form-deactivate.interface';
+
+import { Subscription } from 'rxjs';
+
 import { AlunosService } from '../alunos.service';
 
 @Component({
@@ -8,7 +12,7 @@ import { AlunosService } from '../alunos.service';
   templateUrl: './aluno-form.component.html',
   styleUrls: ['./aluno-form.component.scss']
 })
-export class AlunoFormComponent implements OnInit, OnDestroy {
+export class AlunoFormComponent implements OnInit, OnDestroy, FormDeactivateInterface {
 
   private inscricao: Subscription;
   public id: any;
