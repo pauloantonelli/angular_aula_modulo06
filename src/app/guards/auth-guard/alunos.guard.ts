@@ -20,10 +20,10 @@ export class AlunosGuard implements CanActivateChild {
 
       if (state.url.includes('/edit')) {
 
-        alert('sem acesso no momento!');
+        // alert('sem acesso no momento!');
         /* esse valor poderia vir de um servico ligado ao servidor, aonde mandariamos o usuario logado pra la,
         e receber se ele pode ou nao acessar a edicao de dados*/
-        return false;
+        // return false;
       }
       return true;
     } else {

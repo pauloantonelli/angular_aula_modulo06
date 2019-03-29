@@ -11,8 +11,10 @@ import { AlunosService } from '../alunos.service';
 export class AlunoFormComponent implements OnInit, OnDestroy {
 
   private inscricao: Subscription;
-  protected id: any;
-  protected info: any;
+  public id: any;
+  public info: any;
+  public formMudou = false;
+
   constructor(private rotaAtiva: ActivatedRoute, private alunos: AlunosService) { }
 
   ngOnInit() {
@@ -30,6 +32,14 @@ export class AlunoFormComponent implements OnInit, OnDestroy {
     this.inscricao.unsubscribe();
   }
   novoAluno() {
+
+  }
+  podeDesativar() {
+    if (this.formMudou = true) {
+      confirm('quer mesmo sair? Perderá todos os dados nao salvos');
+
+      return true;
+    }
 
   }
 }
