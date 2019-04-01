@@ -15,15 +15,13 @@ export class AlunosGuard implements CanActivateChild {
   canActivateChild(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<boolean> | boolean {
     if (this.auth.confirmacaoUsuarioAutenticado()) {
 
-      console.log(route);
-      console.log(state);
-
       if (state.url.includes('/edit')) {
 
         // alert('sem acesso no momento!');
         /* esse valor poderia vir de um servico ligado ao servidor, aonde mandariamos o usuario logado pra la,
         e receber se ele pode ou nao acessar a edicao de dados*/
         // return false;
+        console.log('AlunosGuard carregada');
       }
       return true;
     } else {

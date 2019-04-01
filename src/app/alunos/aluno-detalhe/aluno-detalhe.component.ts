@@ -2,6 +2,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { AlunosService } from '../alunos.service';
+import { Aluno } from '../alunos';
 
 @Component({
   selector: 'app-aluno-detalhe',
@@ -12,19 +13,19 @@ export class AlunoDetalheComponent implements OnInit, OnDestroy {
 
   private inscricao: Subscription;
   protected id: any;
-  protected info: any;
+  protected aluno: any;
   constructor(private rotaAtiva: ActivatedRoute, private alunos: AlunosService, private router: Router) { }
 
   ngOnInit() {
-    this.inscricao = this.rotaAtiva.params.subscribe((res: any) => {
-      this.id = res['id'];
-      for (const id of this.alunos.getAlunos()) {
-        // tslint:disable-next-line:triple-equals
-        if (this.id == id.id) {
-          this.info = id;
-        }
+    console.log('ngOnInit: alunoDetalheComponent');
+
+    this.inscricao = this.rotaAtiva.data.subscribe(
+      (res: { aluno: Aluno }) => {
+        console.log('Dados do Resolver carregado');
+        this.aluno = res.aluno;
+        console.log(this.aluno);
       }
-    });
+    );
   }
   ngOnDestroy() {
     this.inscricao.unsubscribe();
