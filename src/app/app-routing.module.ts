@@ -10,12 +10,23 @@ import { AlunosGuard } from './guards/auth-guard/alunos.guard';
 
 const routes: Routes = [
   // lazy loading
-  { path: 'cursos', loadChildren: './cursos/cursos.module#CursosModule', canActivate: [AuthGuard], canActivateChild: [CursosGuard] },
-  { path: 'alunos', loadChildren: './alunos/alunos.module#AlunosModule', canActivate: [AuthGuard] },
+  {
+    path: 'cursos',
+    loadChildren: './cursos/cursos.module#CursosModule',
+    canActivate: [AuthGuard],
+    canActivateChild: [CursosGuard],
+    canLoad: [AuthGuard]
+  },
+  {
+    path: 'alunos',
+    loadChildren: './alunos/alunos.module#AlunosModule',
+    canActivate: [AuthGuard],
+    canLoad: [AuthGuard]
+  },
   // lazy loading
 
   { path: '', component: HomeComponent, canActivate: [AuthGuard] },
-  { path: 'login', component: LoginComponent },
+  { path: 'login', component: LoginComponent }
 ];
 
 @NgModule({
